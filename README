@@ -18,28 +18,10 @@ OPTIONS
   Game setup:
 
  -n?  player name
- -d?  difficulty - 1, 2 or 3 (1 - Beginner, 2 - Intermediate, 3 - Expert) 
  -s?  square size in px (3 to 100, default=25)
  -m?  number of mines
  -w?  field width (2 to 100)
  -h?  field height (2 to 100)
-
-
-  Score display:
-
- -t   list best times for the selected setup
- -3   list best 3BV/s for the selected setup
- -i   list best IOE-s for the selected setup
-
-
-  Score filter:
-
- -f?  select scores by flagging (0 - all (default), 1 - flagging only, 
-      2 - nf only)
- -g?  select scores by whether the game was won (0 - all, 1 - won only 
-      (default), 2 - lost only) (using this option may produce buggy results)
- -l?  number of best scores to display (0 - all (default))
-
 
   Replay:
 
@@ -56,12 +38,6 @@ EXAMPLES
 
  ./miny -t		    # list best times for beg, int and exp combined
 
- ./miny -d2 -t              # list best times for intermediate
-
- ./miny -d2 -f2 -t          # list best times for intermediate, non-flagging 
-                            # only
-
- ./miny -d1 -3              # list best 3BV/s for beginner
 
  ./miny -p last.replay      # play replay for the last game played
 
