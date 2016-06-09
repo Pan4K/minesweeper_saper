@@ -1,0 +1,71 @@
+
+ To play run './miny [options]'. For best results run from terminal.
+
+MOUSE AND KEYBOARD CONTROLS
+
+ Apart from intuitive minesweeper mouse controls, these work:
+
+ To start a new game press Space or, when game has ended, click anywhere 
+ outside the mine field.
+
+ To pause/unpause while playing press P.
+
+ To quit press Escape or Q.
+
+
+OPTIONS
+
+  Game setup:
+
+ -n?  player name
+ -d?  difficulty - 1, 2 or 3 (1 - Beginner, 2 - Intermediate, 3 - Expert) 
+ -s?  square size in px (3 to 100, default=25)
+ -m?  number of mines
+ -w?  field width (2 to 100)
+ -h?  field height (2 to 100)
+
+
+  Score display:
+
+ -t   list best times for the selected setup
+ -3   list best 3BV/s for the selected setup
+ -i   list best IOE-s for the selected setup
+
+
+  Score filter:
+
+ -f?  select scores by flagging (0 - all (default), 1 - flagging only, 
+      2 - nf only)
+ -g?  select scores by whether the game was won (0 - all, 1 - won only 
+      (default), 2 - lost only) (using this option may produce buggy results)
+ -l?  number of best scores to display (0 - all (default))
+
+
+  Replay:
+
+ -p?  play replay file by name (works for replay files in ~/.miny)
+
+
+
+EXAMPLES
+
+ ./miny -d3 -njoe -s35      # start game on expert difficulty, player name joe,
+                            # square size 35
+
+ ./miny -w10 -h10 -m10      # start game with the specified parameters
+
+ ./miny -t		    # list best times for beg, int and exp combined
+
+ ./miny -d2 -t              # list best times for intermediate
+
+ ./miny -d2 -f2 -t          # list best times for intermediate, non-flagging 
+                            # only
+
+ ./miny -d1 -3              # list best 3BV/s for beginner
+
+ ./miny -p last.replay      # play replay for the last game played
+
+ ./miny -p 4.replay         # play the selected replay
+
+
+
